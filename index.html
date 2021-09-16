@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./croppie/croppie.css" />
+  <link rel="stylesheet" href="./style.css">
+
+  <title>Apply frames to the image</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="img-upload">
+      <label>ატვირთე ფაილი</label>
+      <input type="file" id="imageUploadInput" accept="image/*">
+      <br><br>
+
+      <select id='selectResolution'>
+        <option default selected disabled>ფოტოს ზომა</option>
+        <option value="1000">1000x1000 (Default)</option>
+        <option value="2048">2048x2048</option>
+      </select>
+    </div>
+  </div>
+      
+  <div id='cropImage'>
+      <img id='img' src="">
+  </div>
+
+  <canvas id='firstCanvas' width="1000" height="1000"></canvas>
+  <canvas id='canvas' width="1000" height="1000"></canvas>
+
+<script src="./main.js" type="module"></script>
+<script src="./croppie/croppie.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+</body>
+</html>
